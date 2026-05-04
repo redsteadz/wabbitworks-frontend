@@ -1,8 +1,8 @@
 import cx from '../utils/cx'
 
 /**
- * Morphic panel component
- * Provides consistent styling for all content containers
+ * Panel / Card wrapper - Brutalist Editorial Design
+ * Uses tonal carving (surface background shifts) instead of borders
  */
 export default function Panel({ 
   children, 
@@ -15,12 +15,10 @@ export default function Panel({
     <div
       className={cx(
         'rounded-xl',
-        'shadow-md',
-        'border border-base-300/60',
         'relative',
         'z-10',
-        glass ? 'bg-base-100/95 backdrop-blur-sm' : 'bg-base-100',
-        !noPadding && 'p-4',
+        glass ? 'bg-surface/95 backdrop-blur-md' : 'bg-surface',
+        !noPadding && 'p-6',
         className
       )}
       {...props}
